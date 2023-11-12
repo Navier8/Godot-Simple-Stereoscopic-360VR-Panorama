@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4glmimrhajry"]
+
+[ext_resource type="Shader" path="res://stereoequi.gdshader" id="1_bq3h6"]
+[ext_resource type="Script" path="res://world.gd" id="1_wtuy5"]
+[ext_resource type="Texture2D" uid="uid://cis7errmtaqh5" path="res://blender_test.jpg" id="2_2vlan"]
+[ext_resource type="PackedScene" uid="uid://c1xts1c751637" path="res://blender_test.gltf" id="3_dsqpf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wjo3p"]
+render_priority = 0
+shader = ExtResource("1_bq3h6")
+shader_parameter/stereoscopic = true
+shader_parameter/stereo_left_on_top = true
+shader_parameter/stereo_left_only = null
+shader_parameter/equirect = ExtResource("2_2vlan")
+
+[sub_resource type="SphereMesh" id="SphereMesh_vk8we"]
+material = SubResource("ShaderMaterial_wjo3p")
+flip_faces = true
+radius = 10.0
+height = 20.0
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_wtuy5")
+
+[node name="SpherePanorama" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_vk8we")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+
+[node name="blender_test" parent="." instance=ExtResource("3_dsqpf")]
+visible = false
