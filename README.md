@@ -15,9 +15,9 @@ An example image, created using Blender, is included (note, Blender outputs left
 * A simple World scene is provided, with an XROrigin3D and an XRCamera3d. In Project Settings, the OpenXR Reference Space is set to Local, so that any movement, other than rotation of the headset, is ignored and the origin of the panorama image sphere is effectively anchored at the location of the headset.
 
 ## Shader Parameters
-* Stereoscopic On/Off - set On if a top/bottom stereoscopic image. If set Off, then the image is assumed to be a regular equirectangular image
-* Stereo Left on Top - set On if the left eye image is on the top
-* Stereo Left Only - set On to display the left eye only (monoscopic)
+* Stereoscopic On/Off - set On if a top/bottom stereoscopic image. If set Off, then the image is assumed to be a regular equirectangular image (monoscopic)
+* Stereo Left on Top - set On if the left eye in a stereoscopic image is on the top
+* Stereo Left Only - set On to display the left eye only from a stereoscopic image (monoscopic)
 
 ## Code Style
 Please note that the shader code is written to clearly illustrate the technique, rather than as optimal shader code
