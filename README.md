@@ -1,5 +1,7 @@
 # Godot Simple Stereoscopic 360VR Panorama
 
+![Example stereoscopic image in top/bottom format](blender_test.jpg)
+
 This is a simple example of how to view a stereoscopic 360 degree equirectangular image in Godot.
 The stereoscopic effect is achieved by providing a combined left/right image, in top/bottom format, rendered using a shader.
 The shader selects which part of the combined image to display to each eye according to the shader builtin-in VIEW_INDEX.
