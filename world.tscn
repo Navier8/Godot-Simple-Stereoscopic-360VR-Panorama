@@ -2,15 +2,15 @@
 
 [ext_resource type="Shader" path="res://stereoequi.gdshader" id="1_bq3h6"]
 [ext_resource type="Script" path="res://world.gd" id="1_wtuy5"]
-[ext_resource type="Texture2D" uid="uid://cis7errmtaqh5" path="res://blender_test.jpg" id="2_2vlan"]
-[ext_resource type="PackedScene" uid="uid://c1xts1c751637" path="res://blender_test.gltf" id="3_dsqpf"]
+[ext_resource type="Texture2D" uid="uid://dhxl1efuoc8nh" path="res://blender_test.jpg" id="2_2vlan"]
+[ext_resource type="PackedScene" uid="uid://xalk23t4vtd7" path="res://blender_test.gltf" id="3_dsqpf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wjo3p"]
 render_priority = 0
 shader = ExtResource("1_bq3h6")
 shader_parameter/stereoscopic = true
-shader_parameter/stereo_left_on_top = true
-shader_parameter/stereo_left_only = null
+shader_parameter/stereo_left_on_top = false
+shader_parameter/stereo_left_only = false
 shader_parameter/equirect = ExtResource("2_2vlan")
 
 [sub_resource type="SphereMesh" id="SphereMesh_vk8we"]

@@ -24,7 +24,7 @@ void fragment() {
 		if (VIEW_INDEX == VIEW_MONO_LEFT) {
 			albedo = texture(equirect, vec2(1.0-UV.x, UV.y*0.5 + left_offset  ));
 		} else if (VIEW_INDEX == VIEW_RIGHT) {
-			albedo = texture(equirect, vec2(1.0-UV.x, UV.y*0.5 + right_offset )); 
+			albedo = texture(equirect, vec2(1.0-UV.x, UV.y*0.5 + right_offset )); //vec4(0.0,1.0,0.0,1.0);//
 		}
 		ALBEDO = albedo.xyz;
 		ALPHA = albedo.a;

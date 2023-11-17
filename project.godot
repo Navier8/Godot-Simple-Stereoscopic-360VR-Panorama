@@ -16,8 +16,11 @@ run/main_scene="res://world.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
+[rendering]
+
+renderer/rendering_method="mobile"
+
 [xr]
 
-openxr/enabled=true
 openxr/reference_space=0
 shaders/enabled=true
