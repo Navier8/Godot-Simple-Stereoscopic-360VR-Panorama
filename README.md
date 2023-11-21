@@ -6,7 +6,7 @@ This is a simple example of how to view a stereoscopic 360 degree equirectangula
 The stereoscopic effect is achieved by providing a combined left/right image, in top/bottom format, rendered using a spatial shader.
 The shader selects which part of the combined image to display to each eye according to the shader builtin-in VIEW_INDEX.
 
-An example image, created using Blender, is included (note, Blender outputs left on top images), together with the matching gltf geometry.
+An example image, blender_test.jpg , created using Blender, is included (note, Blender outputs left on top images), together with the matching gltf geometry, 'blender_test.gltf'.
 
 ## Note
 * The stereoscopic image must be in top/bottom format (either left or right on top).
